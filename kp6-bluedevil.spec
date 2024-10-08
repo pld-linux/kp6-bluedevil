@@ -1,17 +1,17 @@
 #
 # Conditional build:
 %bcond_with	tests		# build with tests
-%define		kdeplasmaver	6.1.5
+%define		kdeplasmaver	6.2.0
 %define		qtver		5.15.2
 %define		kpname		bluedevil
 Summary:	Integrate the Bluetooth technology within KDE workspace and applications
 Name:		kp6-%{kpname}
-Version:	6.1.5
+Version:	6.2.0
 Release:	1
 License:	GPL v2+/LGPL v2.1+
 Group:		X11/Libraries
 Source0:	https://download.kde.org/stable/plasma/%{kdeplasmaver}/%{kpname}-%{version}.tar.xz
-# Source0-md5:	24f7c585c01fd126c90757260bf49ef6
+# Source0-md5:	0656a8e7ecea09b9aa33beb033115475
 URL:		http://www.kde.org/
 BuildRequires:	Qt6Core-devel >= %{qtver}
 BuildRequires:	Qt6Quick-devel >= %{qtver}
@@ -26,12 +26,12 @@ BuildRequires:	kf6-kdeclarative-devel
 BuildRequires:	kf6-kded-devel
 BuildRequires:	kf6-ki18n-devel
 BuildRequires:	kf6-kio-devel
+BuildRequires:	kf6-kirigami-devel
 BuildRequires:	kf6-knotifications-devel
+BuildRequires:	kf6-ksvg-devel
 BuildRequires:	kf6-kwidgetsaddons-devel
 BuildRequires:	kf6-kwindowsystem-devel
-BuildRequires:	kf6-kirigami-devel
-BuildRequires:	kf6-ksvg-devel
-BuildRequires:	kp6-libplasma-devel
+BuildRequires:	kp6-libplasma-devel >= %{version}
 BuildRequires:	ninja
 BuildRequires:	qt6-build >= %{qtver}
 BuildRequires:	rpmbuild(macros) >= 1.164
@@ -87,6 +87,7 @@ rm -rf $RPM_BUILD_ROOT
 %{_libdir}/qt6/qml/org/kde/plasma/private/bluetooth/kde-qmlmodule.version
 %attr(755,root,root) %{_libdir}/qt6/qml/org/kde/plasma/private/bluetooth/libbluetoothplugin.so
 %{_libdir}/qt6/qml/org/kde/plasma/private/bluetooth/qmldir
+%{_libdir}/qt6/qml/org/kde/plasma/private/bluetooth/SharedDevicesStateProxyModel.qml
 %{_desktopdir}/kcm_bluetooth.desktop
 %{_desktopdir}/org.kde.bluedevilsendfile.desktop
 %{_desktopdir}/org.kde.bluedevilwizard.desktop
