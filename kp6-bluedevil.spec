@@ -91,6 +91,7 @@ rm -rf $RPM_BUILD_ROOT
 %{_desktopdir}/kcm_bluetooth.desktop
 %{_desktopdir}/org.kde.bluedevilsendfile.desktop
 %{_desktopdir}/org.kde.bluedevilwizard.desktop
+%dir %{_datadir}/bluedevilwizard
 %{_datadir}/bluedevilwizard/pin-code-database.xml
 %{_datadir}/knotifications6/bluedevil.notifyrc
 %{_datadir}/metainfo/org.kde.plasma.bluetooth.appdata.xml
