@@ -1,17 +1,17 @@
 #
 # Conditional build:
 %bcond_with	tests		# build with tests
-%define		kdeplasmaver	6.2.2
+%define		kdeplasmaver	6.2.3
 %define		qtver		5.15.2
 %define		kpname		bluedevil
 Summary:	Integrate the Bluetooth technology within KDE workspace and applications
 Name:		kp6-%{kpname}
-Version:	6.2.2
+Version:	6.2.3
 Release:	1
 License:	GPL v2+/LGPL v2.1+
 Group:		X11/Libraries
 Source0:	https://download.kde.org/stable/plasma/%{kdeplasmaver}/%{kpname}-%{version}.tar.xz
-# Source0-md5:	0acb25c23256c9d4e43bb7ea4d338a86
+# Source0-md5:	48542e331ccab756b513c00c123d283d
 URL:		http://www.kde.org/
 BuildRequires:	Qt6Core-devel >= %{qtver}
 BuildRequires:	Qt6Quick-devel >= %{qtver}
