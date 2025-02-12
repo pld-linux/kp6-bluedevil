@@ -1,17 +1,17 @@
 #
 # Conditional build:
 %bcond_with	tests		# build with tests
-%define		kdeplasmaver	6.2.5
+%define		kdeplasmaver	6.3.0
 %define		qtver		5.15.2
 %define		kpname		bluedevil
 Summary:	Integrate the Bluetooth technology within KDE workspace and applications
 Name:		kp6-%{kpname}
-Version:	6.2.5
+Version:	6.3.0
 Release:	1
 License:	GPL v2+/LGPL v2.1+
 Group:		X11/Libraries
 Source0:	https://download.kde.org/stable/plasma/%{kdeplasmaver}/%{kpname}-%{version}.tar.xz
-# Source0-md5:	aadfb7ed26d6229cac30e1d2c5123a1a
+# Source0-md5:	c3bd1ab7ce610d7e51344812d0447675
 URL:		http://www.kde.org/
 BuildRequires:	Qt6Core-devel >= %{qtver}
 BuildRequires:	Qt6Quick-devel >= %{qtver}
@@ -99,7 +99,6 @@ rm -rf $RPM_BUILD_ROOT
 %dir %{_datadir}/plasma/plasmoids/org.kde.plasma.bluetooth
 %dir %{_datadir}/plasma/plasmoids/org.kde.plasma.bluetooth/contents
 %dir %{_datadir}/plasma/plasmoids/org.kde.plasma.bluetooth/contents/ui
-%{_datadir}/plasma/plasmoids/org.kde.plasma.bluetooth/contents/ui/CompactRepresentation.qml
 %{_datadir}/plasma/plasmoids/org.kde.plasma.bluetooth/contents/ui/DeviceItem.qml
 %{_datadir}/plasma/plasmoids/org.kde.plasma.bluetooth/contents/ui/FullRepresentation.qml
 %{_datadir}/plasma/plasmoids/org.kde.plasma.bluetooth/contents/ui/MediaPlayerItem.qml
