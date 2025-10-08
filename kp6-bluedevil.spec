@@ -7,7 +7,7 @@
 Summary:	Integrate the Bluetooth technology within KDE workspace and applications
 Name:		kp6-%{kpname}
 Version:	6.4.5
-Release:	1
+Release:	2
 License:	GPL v2+/LGPL v2.1+
 Group:		X11/Libraries
 Source0:	https://download.kde.org/stable/plasma/%{kdeplasmaver}/%{kpname}-%{version}.tar.xz
@@ -102,7 +102,7 @@ rm -rf $RPM_BUILD_ROOT
 %dir %{_datadir}/bluedevilwizard
 %{_datadir}/bluedevilwizard/pin-code-database.xml
 %{_datadir}/knotifications6/bluedevil.notifyrc
-%{_datadir}/metainfo/org.kde.plasma.bluetooth.appdata.xml
+#%{_datadir}/metainfo/org.kde.plasma.bluetooth.appdata.xml
 %{_datadir}/mime/packages/bluedevil-mime.xml
 %dir %{_datadir}/plasma/plasmoids/org.kde.plasma.bluetooth
 %dir %{_datadir}/plasma/plasmoids/org.kde.plasma.bluetooth/contents
