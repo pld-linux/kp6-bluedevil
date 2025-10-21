@@ -1,17 +1,17 @@
 #
 # Conditional build:
 %bcond_with	tests		# build with tests
-%define		kdeplasmaver	6.4.5
+%define		kdeplasmaver	6.5.0
 %define		qtver		5.15.2
 %define		kpname		bluedevil
 Summary:	Integrate the Bluetooth technology within KDE workspace and applications
 Name:		kp6-%{kpname}
-Version:	6.4.5
-Release:	4
+Version:	6.5.0
+Release:	1
 License:	GPL v2+/LGPL v2.1+
 Group:		X11/Libraries
 Source0:	https://download.kde.org/stable/plasma/%{kdeplasmaver}/%{kpname}-%{version}.tar.xz
-# Source0-md5:	8aa53fc542bdfc0d6f8e4d00d8dd744e
+# Source0-md5:	442784a814b6a5bc0f2b1ebfa7bef848
 URL:		http://www.kde.org/
 BuildRequires:	Qt6Core-devel >= %{qtver}
 BuildRequires:	Qt6Quick-devel >= %{qtver}
@@ -86,14 +86,14 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_bindir}/bluedevil-sendfile
 %attr(755,root,root) %{_bindir}/bluedevil-wizard
-%attr(755,root,root) %{_libdir}/qt6/plugins/kf6/kded/bluedevil.so
-%attr(755,root,root) %{_libdir}/qt6/plugins/kf6/kio/kio_bluetooth.so
-%attr(755,root,root) %{_libdir}/qt6/plugins/kf6/kio/kio_obexftp.so
-%attr(755,root,root) %{_libdir}/qt6/plugins/plasma/kcms/systemsettings/kcm_bluetooth.so
+%{_libdir}/qt6/plugins/kf6/kded/bluedevil.so
+%{_libdir}/qt6/plugins/kf6/kio/kio_bluetooth.so
+%{_libdir}/qt6/plugins/kf6/kio/kio_obexftp.so
+%{_libdir}/qt6/plugins/plasma/kcms/systemsettings/kcm_bluetooth.so
 %dir %{_libdir}/qt6/qml/org/kde/plasma/private/bluetooth
 %{_libdir}/qt6/qml/org/kde/plasma/private/bluetooth/bluetoothplugin.qmltypes
 %{_libdir}/qt6/qml/org/kde/plasma/private/bluetooth/kde-qmlmodule.version
-%attr(755,root,root) %{_libdir}/qt6/qml/org/kde/plasma/private/bluetooth/libbluetoothplugin.so
+%{_libdir}/qt6/qml/org/kde/plasma/private/bluetooth/libbluetoothplugin.so
 %{_libdir}/qt6/qml/org/kde/plasma/private/bluetooth/qmldir
 %{_libdir}/qt6/qml/org/kde/plasma/private/bluetooth/SharedDevicesStateProxyModel.qml
 %{_desktopdir}/kcm_bluetooth.desktop
