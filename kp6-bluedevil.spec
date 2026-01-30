@@ -7,7 +7,7 @@
 Summary:	Integrate the Bluetooth technology within KDE workspace and applications
 Name:		kp6-%{kpname}
 Version:	6.5.5
-Release:	1
+Release:	2
 License:	GPL v2+/LGPL v2.1+
 Group:		X11/Libraries
 Source0:	https://download.kde.org/stable/plasma/%{kdeplasmaver}/%{kpname}-%{version}.tar.xz
