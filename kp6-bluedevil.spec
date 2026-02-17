@@ -1,17 +1,17 @@
 #
 # Conditional build:
 %bcond_with	tests		# build with tests
-%define		kdeplasmaver	6.5.5
+%define		kdeplasmaver	6.6.0
 %define		qtver		5.15.2
 %define		kpname		bluedevil
 Summary:	Integrate the Bluetooth technology within KDE workspace and applications
 Name:		kp6-%{kpname}
-Version:	6.5.5
-Release:	2
+Version:	6.6.0
+Release:	1
 License:	GPL v2+/LGPL v2.1+
 Group:		X11/Libraries
 Source0:	https://download.kde.org/stable/plasma/%{kdeplasmaver}/%{kpname}-%{version}.tar.xz
-# Source0-md5:	daf852c72912a8d723ca962c5a5387c9
+# Source0-md5:	e6567ee0e855c38075660725dbcf434e
 URL:		http://www.kde.org/
 BuildRequires:	Qt6Core-devel >= %{qtver}
 BuildRequires:	Qt6Quick-devel >= %{qtver}
@@ -96,25 +96,21 @@ rm -rf $RPM_BUILD_ROOT
 %{_libdir}/qt6/qml/org/kde/plasma/private/bluetooth/libbluetoothplugin.so
 %{_libdir}/qt6/qml/org/kde/plasma/private/bluetooth/qmldir
 %{_libdir}/qt6/qml/org/kde/plasma/private/bluetooth/SharedDevicesStateProxyModel.qml
+%{_libdir}/qt6/plugins/plasma/applets/org.kde.plasma.bluetooth.so
+%dir %{_libdir}/qt6/qml/org/kde/bluedevil
+%dir %{_libdir}/qt6/qml/org/kde/bluedevil/components
+%{_libdir}/qt6/qml/org/kde/bluedevil/components/ForgetDeviceDialog.qml
+%{_libdir}/qt6/qml/org/kde/bluedevil/components/bluedevilcomponents.qmltypes
+%{_libdir}/qt6/qml/org/kde/bluedevil/components/kde-qmlmodule.version
+%{_libdir}/qt6/qml/org/kde/bluedevil/components/libbluedevilcomponents.so
+%{_libdir}/qt6/qml/org/kde/bluedevil/components/qmldir
 %{_desktopdir}/kcm_bluetooth.desktop
 %{_desktopdir}/org.kde.bluedevilsendfile.desktop
 %{_desktopdir}/org.kde.bluedevilwizard.desktop
 %dir %{_datadir}/bluedevilwizard
 %{_datadir}/bluedevilwizard/pin-code-database.xml
 %{_datadir}/knotifications6/bluedevil.notifyrc
-%{_datadir}/metainfo/org.kde.plasma.bluetooth.appdata.xml
 %{_datadir}/mime/packages/bluedevil-mime.xml
-%dir %{_datadir}/plasma/plasmoids/org.kde.plasma.bluetooth
-%dir %{_datadir}/plasma/plasmoids/org.kde.plasma.bluetooth/contents
-%dir %{_datadir}/plasma/plasmoids/org.kde.plasma.bluetooth/contents/config
-%dir %{_datadir}/plasma/plasmoids/org.kde.plasma.bluetooth/contents/ui
-%{_datadir}/plasma/plasmoids/org.kde.plasma.bluetooth/contents/config/main.xml
-%{_datadir}/plasma/plasmoids/org.kde.plasma.bluetooth/contents/ui/DeviceItem.qml
-%{_datadir}/plasma/plasmoids/org.kde.plasma.bluetooth/contents/ui/FullRepresentation.qml
-%{_datadir}/plasma/plasmoids/org.kde.plasma.bluetooth/contents/ui/MediaPlayerItem.qml
-%{_datadir}/plasma/plasmoids/org.kde.plasma.bluetooth/contents/ui/Toolbar.qml
-%{_datadir}/plasma/plasmoids/org.kde.plasma.bluetooth/contents/ui/main.qml
-%{_datadir}/plasma/plasmoids/org.kde.plasma.bluetooth/metadata.json
 %{_datadir}/qlogging-categories6/bluedevil.categories
 %{_datadir}/remoteview/bluetooth-network.desktop
 
