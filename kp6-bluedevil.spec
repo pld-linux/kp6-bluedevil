@@ -46,6 +46,10 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Integrate the Bluetooth technology within KDE workspace and
 applications.
 
+%description -l pl.UTF-8
+Integracja technologii Bluetooth z aplikacjami i przestrzenią roboczą
+KDE.
+
 %prep
 %setup -q -n %{kpname}-%{version}
 
